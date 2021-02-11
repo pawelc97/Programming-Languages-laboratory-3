@@ -121,6 +121,7 @@
             // 
             this.textBox4.Location = new System.Drawing.Point(131, 243);
             this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(100, 22);
             this.textBox4.TabIndex = 8;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
@@ -129,6 +130,7 @@
             // 
             this.textBox5.Location = new System.Drawing.Point(383, 243);
             this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(100, 22);
             this.textBox5.TabIndex = 9;
             // 
@@ -140,6 +142,7 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "Policz";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 

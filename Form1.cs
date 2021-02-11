@@ -34,7 +34,11 @@ namespace lab3
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            textBox1.Text = null;
+            textBox2.Text = null;
+            textBox3.Text = null;
+            textBox4.Text = null;
+            textBox5.Text = null;
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
@@ -55,6 +59,20 @@ namespace lab3
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            double a, b, c, d, f, obj_nap, obj_spiryt;
+            a = Convert.ToDouble(textBox1.Text);
+            b = Convert.ToDouble(textBox2.Text);
+            c = Convert.ToDouble(textBox3.Text);
+            d = (a - ((c/100)*a))*b;
+            f = ((c / 100) * a) * b; 
+            obj_nap = d * 1000;
+            obj_spiryt = f * 1000;
+            textBox4.Text = Convert.ToString(obj_nap) + "cm^3";
+            textBox5.Text = Convert.ToString(obj_spiryt) + "cm^3";
         }
     }
 }
