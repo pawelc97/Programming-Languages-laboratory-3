@@ -54,11 +54,6 @@ namespace lab3
 
         }
 
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void label4_Click(object sender, EventArgs e)
         {
 
@@ -83,7 +78,26 @@ namespace lab3
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
+            if (radioButton1.Checked)
+            {
+                textBox1.Text = "0,25";
+            }
+        }
 
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton2.Checked)
+            {
+                textBox1.Text = "0,33";
+            }
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton3.Checked)
+            {
+                textBox1.Text = "0,5";
+            }
         }
     }
 }
