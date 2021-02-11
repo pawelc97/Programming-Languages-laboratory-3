@@ -39,6 +39,9 @@ namespace lab3
             textBox3.Text = null;
             textBox4.Text = null;
             textBox5.Text = null;
+            label8.Text = null;
+            label9.Text = null;
+            label10.Text = null;
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
@@ -63,16 +66,24 @@ namespace lab3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            double a, b, c, d, f, obj_nap, obj_spiryt;
-            a = Convert.ToDouble(textBox1.Text);
-            b = Convert.ToDouble(textBox2.Text);
-            c = Convert.ToDouble(textBox3.Text);
+            double a = 0, b = 0, c = 0, d = 0, f = 0, obj_nap = 0, obj_spiryt = 0;
+            if((textBox1.Text == null)){ label8.Text = "Wprowadź poprawne dane!"; }
+            else { a = Convert.ToDouble(textBox1.Text); }
+            if ((textBox2.Text == null) || (Convert.ToDouble(textBox2.Text) < 1)) { label9.Text = "Wprowadź poprawne dane!"; }
+            else { b = Convert.ToDouble(textBox2.Text); }
+            if ((textBox3.Text == null) || (Convert.ToDouble(textBox3.Text) < 1) || (Convert.ToDouble(textBox3.Text) > 100)) { label10.Text = "Wprowadź poprawne dane!"; }
+            else { c = Convert.ToDouble(textBox3.Text); }
             d = (a - ((c/100)*a))*b;
             f = ((c / 100) * a) * b; 
             obj_nap = d * 1000;
             obj_spiryt = f * 1000;
             textBox4.Text = Convert.ToString(obj_nap) + "cm^3";
             textBox5.Text = Convert.ToString(obj_spiryt) + "cm^3";
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
